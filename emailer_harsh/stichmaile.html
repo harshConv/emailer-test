@@ -1,0 +1,1622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" content="true" />
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
+
+    <title>Event Invitation Emailer</title>
+
+    <!-- Roboto (design font). Falls back to Arial where web fonts are not supported -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+<script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=6pLc5P_iPT-Ti9wbrqNhVcKaJR_xD-4Dq3xx6C86e3J3heaJ6iaDNYm5NyClsBYv_O9YV63RIvj0ZFQ1V_gBPr5DZreNLyj38rPSUPQXHC4IXvlWbbSzqg9c5JGQgqVSPF9g1MSJa-h03sGqpRuYSYW1RjvGuCgkSoBnj3Q6uQc57XE5qbceTOxVCPQ9Q20bG1Z-y1pCyPlzuHYanvfSQyjeWCfsS0vStTfoeHeDUTPLXjb_qHkzZpkXHBU-yHVjJ-M6KlcsBjuOeEov9DsemQ" charset="UTF-8"></script><style type="text/css">
+       @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+       /* ==============================
+        BASIC EMAIL RESET
+    ============================== */
+
+       body,
+       table,
+       td {
+         margin: 0;
+         padding: 0;
+       }
+
+       table {
+         border-collapse: collapse;
+         border-spacing: 0;
+       }
+
+       img {
+         border: 0;
+         outline: none;
+         text-decoration: none;
+         display: block;
+         -ms-interpolation-mode: bicubic;
+       }
+
+       body {
+         width: 100% !important;
+         min-width: 100%;
+         background-color: #ffffff;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+       }
+
+       a {
+         text-decoration: none;
+       }
+
+       /* ==============================
+        MOBILE
+    ============================== */
+
+       @media only screen and (max-width: 600px) {
+         .email-container {
+           width: 100% !important;
+           max-width: 100% !important;
+         }
+
+         .mobile-padding {
+           padding-left: 20px !important;
+           padding-right: 20px !important;
+           overflow-wrap: break-word !important;
+           word-wrap: break-word !important;
+           word-break: break-word !important;
+         }
+
+         .hero-image {
+           width: 100% !important;
+           height: auto !important;
+         }
+
+         /* header */
+         .hdr-col {
+           display: block !important;
+           width: 100% !important;
+           text-align: center !important;
+           padding: 6px 0 !important;
+         }
+
+         .hdr-col img {
+           margin: 0 auto !important;
+         }
+
+         .hdr-gap,
+         .hdr-divider {
+           display: none !important;
+         }
+
+         .hdr-btn {
+           float: none !important;
+           margin: 0 auto !important;
+         }
+
+         .hdr-btn-wrap {
+           display: block !important;
+           width: 100% !important;
+           padding: 8px 0 !important;
+         }
+
+         .hdr-btn a {
+           padding: 12px 24px !important;
+           font-size: 15px !important;
+         }
+
+         /* event details */
+         .event-column {
+           width: 100% !important;
+           display: block !important;
+           padding-bottom: 16px !important;
+         }
+
+         .event-column:last-child {
+           padding-bottom: 0 !important;
+         }
+
+         .event-row {
+           width: 100% !important;
+           display: block !important;
+         }
+
+         .event-row td {
+           width: 100% !important;
+           display: block !important;
+         }
+
+         .speaker-photo {
+           width: 64px !important;
+           height: 64px !important;
+         }
+
+         .speaker-desc {
+           font-size: 13px !important;
+           line-height: 20px !important;
+         }
+
+         .bullet-row td {
+           display: table-cell !important;
+         }
+
+         .bullet-icon-cell {
+           width: 24px !important;
+           min-width: 24px !important;
+           padding-right: 10px !important;
+         }
+
+         .bullet-icon {
+           width: 17px !important;
+           height: 17px !important;
+           max-width: 17px !important;
+           min-width: 17px !important;
+         }
+
+         .bullet-text {
+           font-size: 14px !important;
+           line-height: 21px !important;
+         }
+
+         .social-icon {
+           width: 26px !important;
+           height: 26px !important;
+         }
+
+         .footer-column {
+           display: block !important;
+           width: 100% !important;
+           text-align: center !important;
+         }
+
+         .footer-social {
+           margin: 0 auto !important;
+         }
+
+         .footer-decor {
+           display: none !important;
+         }
+
+         .footer-decor-spacer {
+           display: none !important;
+         }
+
+         /* Speaker description readability */
+         .speaker-desc {
+           font-size: 13px !important;
+           line-height: 20px !important;
+         }
+
+         /* Arrows strip */
+         .arrows-img {
+           width: 100% !important;
+           height: auto !important;
+         }
+
+         /* WhatsApp link */
+         .wa-link {
+           font-size: 15px !important;
+         }
+       }
+
+       @media only screen and (max-width: 480px) {
+         .email-container {
+           width: 100% !important;
+           max-width: 100% !important;
+         }
+
+         .bullet-row {
+           width: 100% !important;
+         }
+
+         .bullet-icon-cell {
+           width: 22px !important;
+           min-width: 22px !important;
+           padding-right: 8px !important;
+         }
+
+         .bullet-icon {
+           width: 16px !important;
+           height: 16px !important;
+           max-width: 16px !important;
+           min-width: 16px !important;
+         }
+
+         .bullet-text {
+           font-size: 13px !important;
+           line-height: 20px !important;
+         }
+
+         .mobile-padding {
+           padding-left: 16px !important;
+           padding-right: 16px !important;
+         }
+
+         .hdr-col {
+           padding: 4px 0 !important;
+         }
+
+         .hdr-btn-wrap {
+           padding: 6px 0 !important;
+         }
+
+         .hdr-btn a {
+           padding: 14px 24px !important;
+           font-size: 16px !important;
+         }
+
+         .event-column {
+           padding-bottom: 12px !important;
+         }
+
+         .speaker-photo {
+           width: 56px !important;
+           height: 56px !important;
+         }
+
+         .speaker-desc {
+           font-size: 12px !important;
+           line-height: 18px !important;
+         }
+
+         .social-icon {
+           width: 24px !important;
+           height: 24px !important;
+         }
+
+         .footer-social {
+           margin: 0 auto !important;
+         }
+
+         .footer-social td {
+           padding: 0 4px !important;
+         }
+
+         /* Stack speaker photo above text below 375px */
+         .speaker-layout {
+           display: block !important;
+           width: 100% !important;
+         }
+
+         .speaker-layout .speaker-photo-col {
+           display: block !important;
+           width: 100% !important;
+           text-align: center !important;
+           padding-bottom: 8px !important;
+         }
+
+         .speaker-layout .speaker-text-col {
+           display: block !important;
+           width: 100% !important;
+         }
+       }
+
+
+          /* ===== MOBILE EMAIL IMPROVEMENTS ===== */
+
+          /* Never hide real content images on mobile. */
+          .email-container img {
+            visibility: visible !important;
+            opacity: 1 !important;
+          }
+
+          /* Keep the two company logos in one row. */
+          .mobile-logo-row {
+            width: 100% !important;
+          }
+
+          .mobile-logo-row .mobile-logo-col {
+            display: table-cell !important;
+            width: 50% !important;
+            vertical-align: middle !important;
+            text-align: center !important;
+            padding: 6px 4px !important;
+          }
+
+          .mobile-logo-row .mobile-logo-col img {
+            display: inline-block !important;
+            width: auto !important;
+            max-width: 100% !important;
+            height: auto !important;
+            margin: 0 auto !important;
+          }
+
+          /* Put Let's Connect underneath both logos and center it. */
+          .mobile-logo-row .mobile-connect-row {
+            display: table-row !important;
+            width: 100% !important;
+            text-align: center !important;
+            padding: 10px 0 2px 0 !important;
+          }
+
+          .mobile-logo-row .mobile-connect-row .hdr-btn {
+            float: none !important;
+            display: inline-table !important;
+            margin: 0 auto !important;
+          }
+
+          /* Give bullet icons their own fixed column. This prevents
+             the check image from being squeezed when text wraps. */
+          .bullet-row {
+            width: 100% !important;
+          }
+
+          .bullet-row .bullet-icon-cell {
+            width: 30px !important;
+            min-width: 30px !important;
+            max-width: 30px !important;
+            padding-right: 10px !important;
+            padding-top: 2px !important;
+            vertical-align: top !important;
+          }
+
+          .bullet-row .bullet-icon {
+            display: block !important;
+            width: 18px !important;
+            height: 18px !important;
+            min-width: 18px !important;
+            max-width: none !important;
+            min-height: 18px !important;
+            object-fit: contain !important;
+          }
+
+          .bullet-row .bullet-text {
+            width: auto !important;
+            vertical-align: top !important;
+          }
+
+          /* Keep speaker photos and every other content image visible. */
+          .speaker-photo,
+          .hero-image,
+          .arrows-img {
+            visibility: visible !important;
+            opacity: 1 !important;
+          }
+
+       /* Dark mode */
+       @media (prefers-color-scheme: dark) {
+         body,
+         .email-container {
+           background-color: #1a1a1a !important;
+         }
+
+         .mobile-padding,
+         .greeting,
+         .intro-text,
+         .bullet-text,
+         .closing-text,
+         .warm-regards,
+         .speaker-desc,
+         .anchor-name {
+           color: #e0e0e0 !important;
+         }
+
+         .event-card {
+           background-color: #1e3a5f !important;
+         }
+
+         .event-card td {
+           color: #e0e0e0 !important;
+         }
+
+         .green-box {
+           background-color: #1a3d2e !important;
+         }
+
+         .green-box td {
+           color: #e0e0e0 !important;
+         }
+
+         .event-title-bar {
+           background-color: #1687df !important;
+         }
+       }
+     </style>
+  </head>
+
+  <body style="margin: 0; padding: 0; background-color: #ffffff">
+    <!-- PREHEADER -->
+    <div
+      style="
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        color: transparent;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+      "
+    >
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Uniting Tech and Talent with AI-Driven HRMS &mdash; Join us in Dubai
+    </div>
+
+    <!-- =========================================
+       OUTER WRAPPER
+  ========================================== -->
+
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="width: 100%; background-color: #ffffff"
+    >
+      <tr>
+        <td align="center" valign="top" style="padding: 0">
+          <!-- =====================================
+             MAIN EMAIL
+        ====================================== -->
+
+          <!--[if mso]>
+            <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
+            <tr><td>
+          <![endif]-->
+
+          <table
+            role="presentation"
+            width="600"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            class="email-container"
+            style="width: 100%; max-width: 600px; background-color: #ffffff"
+          >
+            <!-- =====================================
+               HEADER
+               [uKnowva logo] | [Eduonn logo] ........ [Let's Connect]
+          ====================================== -->
+
+            <tr>
+              <td
+                style="
+                  padding: 20px 20px 19px 20px;
+                  border-bottom: 1px solid #e5e5e5;
+                "
+              >
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+               
+                  class="mobile-logo-row"
+                >
+                  <tr>
+                    <!-- uKnowva -->
+                    <td
+                      class="hdr-col mobile-logo-col"
+                      width="150"
+                      valign="middle"
+                      align="left"
+                      style="width: 150px"
+                    >
+                      <img
+                        src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/Uknowva.png"
+                        width="150"
+                        alt="uKnowva HRMS"
+                        style="width: 150px; max-width: 150px; height: auto"
+                      />
+                    </td>
+
+                    <!-- gap -->
+                    <td
+                      class="hdr-gap"
+                      width="15"
+                      style="width: 15px; font-size: 1px; line-height: 1px"
+                    >
+                      &nbsp;
+                    </td>
+
+                    <!-- orange vertical divider -->
+                    <td
+                      class="hdr-divider"
+                      width="1"
+                      bgcolor="#f5a623"
+                      style="
+                        width: 1px;
+                        background-color: #f5a623;
+                        font-size: 1px;
+                        line-height: 1px;
+                      "
+                    >
+                      &nbsp;
+                    </td>
+
+                    <!-- gap -->
+                    <td
+                      class="hdr-gap"
+                      width="14"
+                      style="width: 14px; font-size: 1px; line-height: 1px"
+                    >
+                      &nbsp;
+                    </td>
+
+                    <!-- Eduonn -->
+                    <td
+                      class="hdr-col mobile-logo-col"
+                      width="185"
+                      valign="middle"
+                      align="left"
+                      style="width: 185px"
+                    >
+                      <img
+                        src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/eduonn.png"
+                        width="185"
+                        alt="Eduonn"
+                        style="width: 185px; max-width: 185px; height: auto"
+                      />
+                    </td>
+
+                    <!-- flexible space -->
+                    <td
+                      class="hdr-gap"
+                      style="font-size: 1px; line-height: 1px"
+                    >
+                      &nbsp;
+                    </td>
+
+                    <!-- CTA -->
+                    <td
+                      class="hdr-col mobile-connect-row"
+                      width="159"
+                      valign="middle"
+                      align="right"
+                      style="width: 159px"
+                    >
+                      <table
+                        role="presentation"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        align="right"
+                        class="hdr-btn"
+                      >
+                        <tr>
+                          <td
+                            align="center"
+                            bgcolor="#1687df"
+                            style="
+                              background-color: #1687df;
+                              border-radius: 5px;
+                            "
+                          >
+                            <a
+                              href="https://uknowva.com/contact-us"
+                              target="_blank"
+                              rel="noopener"
+                              style="
+                                display: block;
+                                padding: 10px 27px;
+                                font-family:
+                                  Roboto, Arial, Helvetica, sans-serif;
+                                font-size: 15px;
+                                line-height: 20px;
+                                font-weight: bold;
+                                color: #ffffff;
+                                text-decoration: none;
+                                white-space: nowrap;
+                              "
+                            >
+                              Let's Connect
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <!--[if mso]>
+                      <v:roundrect
+                        xmlns:v="urn:schemas-microsoft-com:vml"
+                        xmlns:w="urn:schemas-microsoft-com:office:word"
+                        href="{{CTA_URL}}"
+                        style="height:40px;v-text-anchor:middle;width:180px;"
+                        arcsize="20%"
+                        stroke="f"
+                        fillcolor="#1687df"
+                      >
+                        <w:anchorlock/>
+                        <center style="font-family:Roboto,Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#ffffff">
+                          Let's Connect
+                        </center>
+                      </v:roundrect>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- =====================================
+               HERO BANNER
+          ====================================== -->
+
+            <tr>
+              <td class="mobile-padding" style="padding: 26px 20px 0 20px">
+                <img
+                  src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/bag.png"
+                  width="560"
+                  alt="Uniting Tech and Talent with AI-Driven HRMS"
+                  class="hero-image"
+                  style="
+                    display: block;
+                    width: 560px;
+                    max-width: 100%;
+                    height: auto;
+                  "
+                />
+              </td>
+            </tr>
+
+            <!-- =====================================
+               GREETING + INTRO
+          ====================================== -->
+
+            <tr>
+              <td
+                class="mobile-padding"
+                style="
+                  padding: 17px 20px 0 20px;
+                  font-family: Roboto, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  line-height: 21px;
+                  color: #082b49;
+                "
+              >
+                <strong>Dear [User]</strong>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                class="mobile-padding"
+                style="
+                  padding: 18px 20px 0 20px;
+                  font-family: Roboto, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  line-height: 21px;
+                  color: #082b49;
+                "
+              >
+                We are thrilled to invite you to a
+                <strong>CHRO Roundtable</strong> hosted by
+                <strong>Eduonn, powered by uKnowva HRMS.</strong>
+                It&rsquo;s going to be an exclusive event to bring together the
+                brightest HR minds across UAE and, specifically in Dubai.
+              </td>
+            </tr>
+
+            <!-- =====================================
+               EVENT DETAILS TITLE
+          ====================================== -->
+
+            <tr>
+              <td class="mobile-padding" style="padding: 20px 20px 0 20px">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                >
+                  <tr>
+                    <td
+                      bgcolor="#1687df"
+                      style="
+                        background-color: #1687df;
+                        border-radius: 5px;
+                        padding: 8px 10px;
+                        font-family: Roboto, Arial, Helvetica, sans-serif;
+                        font-size: 14px;
+                        line-height: 18px;
+                        font-weight: bold;
+                        color: #ffffff;
+                      "
+                      class="event-title-bar"
+                    >
+                      Event Details:
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- =====================================
+               EVENT DETAILS CARD
+          ====================================== -->
+
+            <tr>
+              <td class="mobile-padding" style="padding: 15px 20px 0 20px">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  bgcolor="#e7f2fc"
+                  class="event-card"
+                  style="
+                    width: 100%;
+                    background-color: #e7f2fc;
+                    border-radius: 5px;
+                  "
+                >
+                  <tr>
+                    <td style="padding: 16px 12px 17px 12px">
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        class="event-row"
+                      >
+                        <tr>
+                          <!-- WHEN -->
+
+                          <td width="38%" valign="top" class="event-column">
+                            <table
+                              role="presentation"
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                            >
+                              <tr>
+                                <td valign="middle" style="padding-right: 9px">
+                                  <img
+                                    src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/when.png"
+                                    width="30"
+                                    height="30"
+                                    alt="When"
+                                    style="width: 30px; height: 30px"
+                                  />
+                                </td>
+
+                                <td
+                                  valign="middle"
+                                  style="
+                                    font-family:
+                                      Roboto, Arial, Helvetica, sans-serif;
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                    color: #111111;
+                                  "
+                                >
+                                  When:<br />
+
+                                  <strong> Fri, 12th July 2024 </strong>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+
+                          <!-- TIME -->
+
+                          <td width="29%" valign="top" class="event-column">
+                            <table
+                              role="presentation"
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                            >
+                              <tr>
+                                <td valign="middle" style="padding-right: 9px">
+                                  <img
+                                    src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/time.png"
+                                    width="30"
+                                    height="30"
+                                    alt="Time"
+                                    style="width: 30px; height: 30px"
+                                  />
+                                </td>
+
+                                <td
+                                  valign="middle"
+                                  style="
+                                    font-family:
+                                      Roboto, Arial, Helvetica, sans-serif;
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                    color: #111111;
+                                  "
+                                >
+                                  Time:<br />
+
+                                  <strong> 6 PM - 8 PM </strong>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+
+                          <!-- VENUE -->
+
+                          <td width="33%" valign="top" class="event-column">
+                            <table
+                              role="presentation"
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                            >
+                              <tr>
+                                <td valign="middle" style="padding-right: 9px">
+                                  <img
+                                    src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/venue.png"
+                                    width="30"
+                                    height="30"
+                                    alt="Venue"
+                                    style="width: 30px; height: 30px"
+                                  />
+                                </td>
+
+                                <td
+                                  valign="middle"
+                                  style="
+                                    font-family:
+                                      Roboto, Arial, Helvetica, sans-serif;
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                    color: #111111;
+                                  "
+                                >
+                                  Venue:<br />
+
+                                  <strong> Pullman, JLT, Dubai </strong>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+
+                        <!-- TOPIC -->
+
+                        <tr>
+                          <td style="padding-top: 11px">
+                            <table
+                              role="presentation"
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                              width="100%"
+                            >
+                              <tr>
+                                <td valign="middle" style="padding-right: 9px">
+                                  <img
+                                    src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/topic.png"
+                                    width="30"
+                                    height="30"
+                                    alt="Topic"
+                                    style="width: 30px; height: 30px"
+                                  />
+                                </td>
+
+                                <td
+                                  valign="middle"
+                                  style="
+                                    font-family:
+                                      Roboto, Arial, Helvetica, sans-serif;
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                    color: #111111;
+                                  "
+                                >
+                                  Topic:<br />
+
+                                  <strong>
+                                    Tomorrow&rsquo;s HR Today: Skills for the
+                                    Future Workforce
+                                  </strong>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- =====================================
+               INTRO TO BULLETS
+          ====================================== -->
+
+            <tr>
+              <td
+                class="mobile-padding"
+                style="
+                  padding: 19px 20px 0 20px;
+                  font-family: Roboto, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  line-height: 21px;
+                  color: #082b49;
+                "
+              >
+                Join us for an evening filled with valuable discussions,
+                meaningful connections, and collaborative learning. This round
+                table offers a unique opportunity to:
+              </td>
+            </tr>
+
+            <!-- =====================================
+               GREEN BULLET BOX
+          ====================================== -->
+
+            <tr>
+              <td class="mobile-padding" style="padding: 20px 20px 0 20px">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  bgcolor="#d5faec"
+                  class="green-box"
+                  style="background-color: #d5faec; border-radius: 5px"
+                >
+                  <tr>
+                    <td style="padding: 13px 13px 16px 13px">
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        class="bullet-list"
+                      >
+                        <!-- BULLET 1 -->
+
+                        <tr class="bullet-row">
+                          <td
+                            width="24"
+                            valign="top"
+                            class="bullet-icon-cell"
+                            style="width: 24px; min-width: 24px; padding-top: 2px; padding-right: 10px; padding-bottom: 11px;"
+                          >
+                            <img
+                              src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/icon-check.png"
+                              width="17"
+                              height="17"
+                              alt=""
+                              class="bullet-icon"
+                              style="display: block; width: 18px; height: 18px; max-width: none; min-width: 18px; min-height: 18px; object-fit: contain;"
+                            />
+                          </td>
+
+                          <td
+                            valign="top"
+                            class="bullet-text"
+                            style="
+                              padding-bottom: 11px;
+                              font-family: Roboto, Arial, Helvetica, sans-serif;
+                              font-size: 14px;
+                              line-height: 22px;
+                              color: #082b49;
+                            "
+                          >
+                            Discuss and strategise on navigating the evolving
+                            landscape of work and skills.
+                          </td>
+                        </tr>
+
+                        <!-- BULLET 2 -->
+
+                        <tr class="bullet-row">
+                          <td
+                            width="24"
+                            valign="top"
+                            class="bullet-icon-cell"
+                            style="width: 24px; min-width: 24px; padding-top: 2px; padding-right: 10px; padding-bottom: 11px;"
+                          >
+                            <img
+                              src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/icon-check.png"
+                              width="17"
+                              height="17"
+                              alt=""
+                              class="bullet-icon"
+                              style="display: block; width: 18px; height: 18px; max-width: none; min-width: 18px; min-height: 18px; object-fit: contain;"
+                            />
+                          </td>
+
+                          <td
+                            valign="top"
+                            class="bullet-text"
+                            style="
+                              padding-bottom: 11px;
+                              font-family: Roboto, Arial, Helvetica, sans-serif;
+                              font-size: 14px;
+                              line-height: 22px;
+                              color: #082b49;
+                            "
+                          >
+                            Network with fellow CHROs and HR leaders from a
+                            variety of industries.
+                          </td>
+                        </tr>
+
+                        <!-- BULLET 3 -->
+
+                        <tr class="bullet-row">
+                          <td
+                            width="24"
+                            valign="top"
+                            class="bullet-icon-cell"
+                            style="width: 24px; min-width: 24px; padding-top: 2px; padding-right: 10px;"
+                          >
+                            <img
+                              src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/icon-check.png"
+                              width="17"
+                              height="17"
+                              alt=""
+                              class="bullet-icon"
+                              style="display: block; width: 18px; height: 18px; max-width: none; min-width: 18px; min-height: 18px; object-fit: contain;"
+                            />
+                          </td>
+
+                          <td
+                            valign="top"
+                            class="bullet-text"
+                            style="
+                              font-family: Roboto, Arial, Helvetica, sans-serif;
+                              font-size: 14px;
+                              line-height: 22px;
+                              color: #082b49;
+                            "
+                          >
+                            Participate in engaging conversations and gain
+                            actionable and real-time insights to propel your
+                            organisation&rsquo;s HR initiatives forward.
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- =====================================
+               CLOSING CONTENT
+          ====================================== -->
+
+            <tr>
+              <td
+                class="mobile-padding"
+                style="
+                  padding: 20px 20px 0 20px;
+                  font-family: Roboto, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  line-height: 21px;
+                  color: #082b49;
+                "
+              >
+                We are also excited to announce the release of Eduonn&rsquo;s
+                book titled
+                <strong>&ldquo;The Future Skills Playbook&rdquo;</strong>
+                during the event.
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                class="mobile-padding"
+                style="
+                  padding: 21px 20px 0 20px;
+                  font-family: Roboto, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  line-height: 21px;
+                  color: #082b49;
+                "
+              >
+                Your presence will add immense value to the discussions, and we
+                look forward to your participation. This is an exclusive event
+                for enterprise CHROs only.
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                class="mobile-padding"
+                style="
+                  padding: 21px 20px 0 20px;
+                  font-family: Roboto, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  line-height: 21px;
+                  color: #082b49;
+                "
+              >
+                To confirm your attendance and secure your free pass, please
+                WhatsApp us at
+              </td>
+            </tr>
+
+            <!-- WHATSAPP NUMBER -->
+
+            <tr>
+              <td class="mobile-padding" style="padding: 5px 20px 0 20px">
+                <table
+                  role="presentation"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                >
+                  <tr>
+                    <td valign="middle" style="padding-right: 4px">
+                      <a href="https://wa.me/915828577773" target="_blank" rel="noopener">
+                        <img
+                          src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/whatsapp%201.png"
+                          width="17"
+                          height="17"
+                          alt="WhatsApp"
+                          style="width: 17px; height: 17px"
+                        />
+                      </a>
+                    </td>
+
+                    <td
+                      valign="middle"
+                      class="wa-link"
+                      style="
+                        font-family: Roboto, Arial, Helvetica, sans-serif;
+                        font-size: 14px;
+                        line-height: 18px;
+                        font-weight: bold;
+                        color: #1687df;
+                      "
+                    >
+                      <a href="https://wa.me/915828577773" target="_blank" rel="noopener" style="color: #1687df; text-decoration: underline">
+                        582857773
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                class="mobile-padding"
+                style="
+                  padding: 22px 20px 0 20px;
+                  font-family: Roboto, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  line-height: 21px;
+                  color: #082b49;
+                "
+              >
+                We can&rsquo;t wait to see you there!
+              </td>
+            </tr>
+
+            <!-- =====================================
+               ANCHOR
+          ====================================== -->
+
+            <tr>
+              <td class="mobile-padding" style="padding: 18px 20px 0 18px">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  class="speaker-layout"
+                >
+                  <tr>
+                    <td width="97" valign="middle" style="width: 97px" class="speaker-photo-col">
+                      <img
+                        src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/anchor.png"
+                        width="78"
+                        height="78"
+                        alt="Aakanksha Singh"
+                        class="speaker-photo"
+                        style="
+                          width: 78px;
+                          height: 78px;
+                          border-radius: 50%;
+                          border: 3px solid #f5a623;
+                        "
+                      />
+                    </td>
+
+                    <td
+                      valign="middle"
+                      style="font-family: Roboto, Arial, Helvetica, sans-serif"
+                      class="speaker-text-col"
+                    >
+                      <table
+                        role="presentation"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                      >
+                        <tr>
+                          <td
+                            bgcolor="#4b5b66"
+                            style="
+                              background-color: #4b5b66;
+                              border-radius: 11px;
+                              padding: 3px 16px;
+                              font-family: Roboto, Arial, Helvetica, sans-serif;
+                              font-size: 13px;
+                              line-height: 16px;
+                              color: #ffffff;
+                            "
+                          >
+                            Anchor:
+                          </td>
+                        </tr>
+                      </table>
+
+                      <div
+                        style="
+                          padding-top: 4px;
+                          font-family: Roboto, Arial, Helvetica, sans-serif;
+                          font-size: 14px;
+                          line-height: 18px;
+                          font-weight: bold;
+                          color: #082b49;
+                        "
+                      >
+                        Aakanksha Singh (Actor, Anchor &amp; Casting Director)
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- =====================================
+               SPEAKER
+          ====================================== -->
+
+            <tr>
+              <td class="mobile-padding" style="padding: 16px 20px 0 18px">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  class="speaker-layout"
+                >
+                  <tr>
+                    <td width="97" valign="top" style="width: 97px" class="speaker-photo-col">
+                      <img
+                        src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/speaker.png"
+                        width="78"
+                        height="78"
+                        alt="S.P. Singh"
+                        class="speaker-photo"
+                        style="
+                          width: 78px;
+                          height: 78px;
+                          border-radius: 50%;
+                          border: 3px solid #f5a623;
+                        "
+                      />
+                    </td>
+
+                    <td
+                      valign="top"
+                      style="
+                        font-family: Roboto, Arial, Helvetica, sans-serif;
+                        color: #082b49;
+                      "
+                      class="speaker-text-col"
+                    >
+                      <table
+                        role="presentation"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        style="margin-top: 2px"
+                      >
+                        <tr>
+                          <td
+                            bgcolor="#4b5b66"
+                            style="
+                              background-color: #4b5b66;
+                              border-radius: 11px;
+                              padding: 3px 16px;
+                              font-family: Roboto, Arial, Helvetica, sans-serif;
+                              font-size: 13px;
+                              line-height: 16px;
+                              color: #ffffff;
+                            "
+                          >
+                            Speaker:
+                          </td>
+                        </tr>
+                      </table>
+
+                      <div
+                        class="speaker-desc"
+                        style="
+                          padding-top: 4px;
+                          font-family: Roboto, Arial, Helvetica, sans-serif;
+                          font-size: 14px;
+                          line-height: 24px;
+                          color: #082b49;
+                        "
+                      >
+                        <strong>S.P. Singh (Retd. S.P/CBI)</strong>
+                        A decorated officer who has braved terrorism, financial
+                        scams, and numerous anti corruption cases,&nbsp; body
+                        offences and financial crimes&nbsp;including the PNB
+                        Bank Dacoity of Rs.5.72 crores at Ludhiana&nbsp;&nbsp;,
+                        Operation Black Thunder at Amritsar, Securities
+                        Scam&nbsp;of 1992 (Harshad&nbsp;&nbsp;Mehta Cases), CRB
+                        Capital Markets Scam, Nirav Modi Scam etc.<br />
+                        He has been awarded with
+                        <strong
+                          >Indian Police Medal for Meritorious Services&nbsp;and
+                          President&rsquo;s Police Medal for Distinguished
+                          Services by the Government of India.</strong
+                        >
+                        His experiences bring unparalleled depth to this
+                        critical discussion.
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- =====================================
+               FULL WIDTH BLUE DIVIDER
+          ====================================== -->
+
+            <tr>
+              <td style="padding-top: 40px">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                >
+                  <tr>
+                    <td
+                      height="3"
+                      bgcolor="#1687df"
+                      style="
+                        height: 3px;
+                        line-height: 3px;
+                        font-size: 1px;
+                        background-color: #1687df;
+                      "
+                    >
+                      &nbsp;
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- =====================================
+               WARM REGARDS
+          ====================================== -->
+
+            <tr>
+              <td
+                class="mobile-padding"
+                style="
+                  padding: 26px 20px 0 20px;
+                  font-family: Roboto, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  line-height: 22px;
+                  color: #082b49;
+                "
+              >
+                Warm regards,<br />
+                The uKnowva Team
+              </td>
+            </tr>
+
+            <!-- =====================================
+               DECORATIVE ARROWS
+               ONE full-width image (600 x 20 px): grey line + 8 colourful arrows + grey line
+               Upload arrows.png at 1200 x 40 px (retina) - it is shown at 600 x 20 px
+          ====================================== -->
+
+            <tr>
+              <td style="padding-top: 26px; font-size: 0; line-height: 0">
+                <img
+                  src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/arrows.png"
+                  width="600"
+                  height="20"
+                  alt=""
+                  class="arrows-img"
+                  style="
+                    display: block;
+                    width: 600px;
+                    max-width: 100%;
+                    height: auto;
+                  "
+                />
+              </td>
+            </tr>
+
+            <!-- =====================================
+               FOOTER
+               Col 1 (169px): social icons     Col 2 (222px): unsubscribe pill (centred)
+               Col 3 (169px): decorative graphic (spans both rows, right aligned)
+          ====================================== -->
+
+            <tr>
+              <td style="padding: 0 20px 18px 20px">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                >
+                  <!-- ROW 1 : social icons | (empty) | decoration -->
+
+                  <tr>
+                    <!-- SOCIAL ICONS -->
+
+                    <td
+                      width="169"
+                      valign="top"
+                      align="left"
+                      class="footer-column"
+                      style="width: 169px; padding: 27px 0 7px 0"
+                    >
+                      <table
+                        role="presentation"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        class="footer-social"
+                      >
+                        <tr>
+                          <td style="padding-right: 6px">
+                            <a href="https://www.facebook.com/uknowva" target="_blank" rel="noopener">
+                              <img
+                                src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/facebook.png"
+                                width="27"
+                                height="27"
+                                alt="Facebook"
+                                class="social-icon"
+                                style="width: 27px; height: 27px"
+                              />
+                            </a>
+                          </td>
+
+                          <td style="padding-right: 6px">
+                            <a href="https://twitter.com/uknowva target="_blank" rel="noopener">
+                              <img
+                                src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/twitter.png"
+                                width="27"
+                                height="27"
+                                alt="Twitter"
+                                class="social-icon"
+                                style="width: 27px; height: 27px"
+                              />
+                            </a>
+                          </td>
+
+                          <td>
+                            <a href="https://www.linkedin.com/company/13301092/
+" target="_blank" rel="noopener">
+                              <img
+                                src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/linkdin.png"
+                                width="27"
+                                height="27"
+                                alt="LinkedIn"
+                                class="social-icon"
+                                style="width: 27px; height: 27px"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <!-- spacer (hidden on mobile) -->
+
+                    <td
+                      class="footer-decor-spacer"
+                      style="font-size: 1px; line-height: 1px"
+                    >
+                      &nbsp;
+                    </td>
+
+                    <!-- DECORATIVE GRAPHIC (chevron outlines, grey circle, triangle, dots)
+                       footer-shape.png must be a TIGHT crop of the artwork (no empty margin, no grey line)
+                       at 338 x 128 px (shown at 169 x 64 px) -->
+
+                    <td
+                      width="169"
+                      rowspan="2"
+                      valign="top"
+                      align="right"
+                      class="footer-decor"
+                      style="width: 169px"
+                    >
+                      <img
+                        src="https://anirudh.uknowva-stage.in/harsh/emailer_harsh/IMAGES/footer-shape.png"
+                        width="169"
+                        height="64"
+                        alt=""
+                        style="display: block; width: 169px; height: auto"
+                      />
+                    </td>
+                  </tr>
+
+                  <!-- ROW 2 : (empty) | unsubscribe pill -->
+
+                  <tr>
+                    <td
+                      class="footer-decor-spacer"
+                      style="font-size: 1px; line-height: 1px"
+                    >
+                      &nbsp;
+                    </td>
+
+                    <!-- UNSUBSCRIBE -->
+
+                    <td align="center" valign="top" class="footer-column">
+                      <table
+                        role="presentation"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        align="center"
+                      >
+                        <tr>
+                          <td
+                            bgcolor="#e5e5e5"
+                            style="
+                              background-color: #e5e5e5;
+                              border-radius: 10px;
+                              padding: 2px 14px;
+                            "
+                          >
+                            <a
+                              href="{{UNSUBSCRIBE_URL}}"
+                              target="_blank"
+                              rel="noopener"
+                              style="
+                                font-family:
+                                  Roboto, Arial, Helvetica, sans-serif;
+                                font-size: 13px;
+                                line-height: 16px;
+                                color: #343434;
+                                text-decoration: none;
+                              "
+                            >
+                              unsubscribe
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <!--[if mso]>
+            </td></tr></table>
+          <![endif]-->
+
+          <!-- END MAIN EMAIL -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
